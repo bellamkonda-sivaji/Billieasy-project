@@ -1,0 +1,63 @@
+
+
+POST  http://localhost:3000/employees/
+
+Content-Type: application/json
+
+{
+
+"employerName":"Bellamkonda Sivaji",
+"employerAge":25,
+"employerGender":"Male"
+
+
+}
+
+###
+
+POST http://localhost:3000/projects/
+
+Content-Type: application/json
+
+{
+    "projectName":"Billieasy",
+    "projectDescription":"Developing APIs",
+    "employer_id:":2
+}
+
+###
+
+GET http://localhost:3000/employees/
+
+###
+
+GET http://localhost:3000/projects/
+
+###
+
+GET http://localhost:3000/employees/17/
+
+###
+
+GET http://localhost:3000/employees/19/
+
+###
+
+GET http://localhost:3000/join/conditions/
+
+###
+
+
+PUT http://localhost:3000/employees/9/ 
+
+Content-Type: "application/json"
+
+{
+    "employerName":"Bargav",
+    "employerAge":25,
+    "employerGender":"Male"
+}
+
+###
+
+DELETE http://localhost:3000/employees/10/
