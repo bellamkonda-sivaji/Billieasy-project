@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const pool =require("./db");
-
+const port = process.env.PORT || 3000
 app.use(express.json())
 
 
@@ -174,7 +174,7 @@ app.delete("/employees/:employerId/",async(request,response)=>{
 
 
 
-app.listen(3000, () => {
-  console.log("https://localhost:3000/");
-  console.log("hello")
+app.listen(port, () => {
+  console.log("Server running at" + port);
+  
 })
