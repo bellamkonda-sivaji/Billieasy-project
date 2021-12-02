@@ -8,10 +8,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "git": "^0.1.5",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "pool": "^0.4.1",
+    "postgresql": "0.0.1"
   },
   "devDependencies": {},
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellamkonda-sivaji/Billieasy-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bellamkonda-sivaji/Billieasy-project/issues"
+  },
+  "homepage": "https://github.com/bellamkonda-sivaji/Billieasy-project#readme",
   "description": ""
 }
