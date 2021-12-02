@@ -49,6 +49,19 @@ app.post("/projects/",async (request,response)=>{
   }
 });
 
+//empty data
+
+app.get("/", async (request, response) => {
+  try{
+  
+  response.json("Hello")
+  }
+  catch(error){
+    console.log(error.message)
+  }
+  
+});
+
 //employers all data
 
 app.get("/employees/", async (request, response) => {
