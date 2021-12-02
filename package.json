@@ -1,19 +1,26 @@
 {
-  "name": "git",
+  "name": "nodedeveloper",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": "^17.1.0"
   },
-  "author": "",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "node",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "folder": "0.0.4",
     "git": "^0.1.5",
+    
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "pool": "^0.4.1",
-    "postgresql": "0.0.1"
+    "postgresql": "0.0.1",
+    "tarball": "0.0.5",
+    "url": "^0.11.0"
   },
   "devDependencies": {},
   "keywords": [],
@@ -25,5 +32,5 @@
     "url": "https://github.com/bellamkonda-sivaji/Billieasy-project/issues"
   },
   "homepage": "https://github.com/bellamkonda-sivaji/Billieasy-project#readme",
-  "description": ""
+  "description": "a really cool app"
 }
