@@ -1,7 +1,9 @@
 const { response } = require("express");
 const express = require("express");
+const {spawn}=require('child_process')
 const app = express();
 const pool =require("./db");
+
 const port = process.env.PORT || 3000
 console.log("port is running" + port)
 app.use(express.json())
@@ -56,7 +58,8 @@ app.post("/projects/",async (request,response)=>{
 app.get("/", async (request, response) => {
   try{
   
-  response.json("Hello")
+  response.json("Hello papa")
+  response.json("Welcome To This Big World")
   }
   catch(error){
     console.log(error.message)
@@ -227,6 +230,9 @@ app.get("/users/feedback/",async(request,response)=>{
 })
 
 
+const childPython = spawn('python',['--version']);
+
+
 
 app.listen(port, () => {
 
@@ -234,4 +240,6 @@ app.listen(port, () => {
   
   
 })
+
+module.export=  app
 
