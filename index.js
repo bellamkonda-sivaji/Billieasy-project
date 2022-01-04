@@ -58,8 +58,9 @@ app.post("/projects/",async (request,response)=>{
 app.get("/", async (request, response) => {
   try{
   
-  response.json("Hello papa")
-  response.json("Welcome To This Big World")
+  response.send("Hello papa")
+  response.send("Welcome To This Big World")
+  response.send("I Hope You Doing Well")
   }
   catch(error){
     console.log(error.message)
