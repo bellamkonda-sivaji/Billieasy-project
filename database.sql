@@ -19,4 +19,14 @@ CREATE TABLE projects(
 
 CREATE TABLE staff_data(name VARCHAR (300));
 
+CREATE TABLE feedback(
+    first_question VARCHAR(300),
+    second_question VARCHAR(300),
+    third_questiong VARCHAR(300),
+    fourth_question VARCHAR(500),
+    fifth_question INTEGER
+
+
+)
+
 

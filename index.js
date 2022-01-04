@@ -1,12 +1,10 @@
+const { response } = require("express");
 const express = require("express");
 const app = express();
 const pool =require("./db");
 const port = process.env.PORT || 3000
+console.log("port is running" + port)
 app.use(express.json())
-
-
-
-//Routes//
 
 app.post("/employees/",async (request,response)=>{
   try{
@@ -49,7 +47,11 @@ app.post("/projects/",async (request,response)=>{
   }
 });
 
+
 //empty data 
+
+//empty data
+
 
 app.get("/", async (request, response) => {
   try{
@@ -131,6 +133,7 @@ app.get("/join/conditions/", async (request, response) => {
     const {employerId}=request.params
 
   const data=await pool.query(
+    
     `
     SELECT
       *
@@ -185,9 +188,50 @@ app.delete("/employees/:employerId/",async(request,response)=>{
   }
 });
 
+app.post("/rating/",async (request,response)=>{
+  try{
+    const {firstQuestion,secondQuestion,thirdQuestion,fourthQuestion,fifthQuestion}=request.body;
+    const data=await pool.query(
+      "INSERT INTO feedback(first_question,second_question,third_question,fourth_question,fifth_question) VALUES ($1,$2,$3,$4,$5) RETURNING *",
+        [firstQuestion,secondQuestion,thirdQuestion,fourthQuestion,fifthQuestion]
+        
+        )
+        
+        console.log(firstQuestion,secondQuestion,thirdQuestion,fourthQuestion,fifthQuestion)
+    
+    response.json(data.rows)
+  }
+
+  catch(error){
+    console.error(error.message)
+  }
+});
+
+app.get("/users/feedback/",async(request,response)=>{
+  try{
+  const data=await pool.query(
+    
+    `
+    SELECT
+      *
+    FROM
+      feedback`
+  )
+  
+  response.json(data.rows)
+}
+  catch(error){
+    console.log(error.message)
+  }
+  
+})
+
 
 
 app.listen(port, () => {
+
   console.log("Server running at " + port);
   
+  
 })
+

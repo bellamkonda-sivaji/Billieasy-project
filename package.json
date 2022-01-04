@@ -11,14 +11,16 @@
   "author": "node",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "folder": "0.0.4",
     "git": "^0.1.5",
-    
+    "i": "^0.3.7",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "pool": "^0.4.1",
     "postgresql": "0.0.1",
+    "python": "0.0.4",
+    "python-shell": "^3.0.1",
     "tarball": "0.0.5",
     "url": "^0.11.0"
   },
